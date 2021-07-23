@@ -13,6 +13,7 @@ OGSTM_HOME=$PWD
 git clone git@github.com:CMCC-Foundation/BiogeochemicalFluxModel.git bfm
 cd bfm
 git checkout -b $BFM_BRANCH origin/$BFM_BRANCH
+git checkout a59f79ba30edf90229fbf76ddf2a077
 
 cd $OGSTM_HOME
 git clone git@github.com:gcossarini/BFMCOUPLER.git
