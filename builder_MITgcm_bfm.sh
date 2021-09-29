@@ -58,7 +58,7 @@ export OPENMP_FLAG=          # OpenMP deactivated
 # Warning : this choice must be consistent with Section 1. 
 
 # Just comment the two following lines you are not using modules. 
-export MODULEFILE=$PWD/compilers/machine_modules/galileo.intel
+export MODULEFILE=$PWD/compilers/machine_modules/g100.intel
 source $MODULEFILE
 
 COUPLERDIR=$PWD/BFMCOUPLER
