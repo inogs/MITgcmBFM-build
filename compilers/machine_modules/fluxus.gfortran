@@ -1,0 +1,5 @@
+module purge
+module load openmpi-x86_64
+export NETCDFF_INC=$NETCDF_INC
+export NETCDFF_LIB=$NETCDF_LIB
+
