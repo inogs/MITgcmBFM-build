@@ -30,6 +30,7 @@ mkdir -p $MYCODE $NAMELISTS
 
 ########  copying from preset #############
 cp $PWD/presets/${PRESET}/*.h $MYCODE
+cp $PWD/presets/${PRESET}/*.F $MYCODE
 
 echo "Now edit and configure your setup in $MYCODE/"
 
