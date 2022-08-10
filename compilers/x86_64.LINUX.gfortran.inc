@@ -24,8 +24,8 @@
 #   or  with openmpi:
 #       module load openmpi
 # and on baudelaire.csail.mit.edu (FC13), using:
-	export MPI_GCC_DIR=/usr/lib64/openmpi
-	export MPI_INC_DIR=/usr/include/openmpi-x86_64
+	export MPI_GCC_DIR=${MPI_GCC:-"/usr/lib64/openmpi"}
+	export MPI_INC_DIR=${MPI_INC:-"/usr/include/openmpi-x86_64"}
 	export PATH=$MPI_GCC_DIR/bin:$PATH
 
 #-------
@@ -97,13 +97,13 @@ F90OPTIM=$FOPTIM
 export NETCDF_INC=/usr/lib64/gfortran/modules/
 export NETCDF_LIB=/usr/lib64
 
-NETCDF_ROOT='/usr'
-NETCDF_HOME='/usr'
-INCLUDEDIRS='/usr/include'
-INCLUDES='-I/usr/include -I/usr/include/gsl -I/usr/include/openblas'
-LIBS='-L/usr/lib64 -L/usr/lib -L/usr/lib64/atlas'
-GSL_INC='/usr/include/gsl'
-GSL_LIB='/usr/lib64 -lgsl -lgslcblas'
+NETCDF_ROOT=$NETCDF_HOME
+NETCDF_HOME=$NETCDF_HOME
+#INCLUDEDIRS='/usr/include'
+#INCLUDES='-I/usr/include -I/usr/include/gsl -I/usr/include/openblas'
+#LIBS='-L/usr/lib64 -L/usr/lib -L/usr/lib64/atlas'
+GSL_INC=$GSL_INC
+GSL_LIB=$GSL_LIB
 
 if [ -n "$MPI_INC_DIR" -a "x$MPI" = xtrue ] ; then
     INCLUDEDIRS="$INCLUDEDIRS $MPI_INC_DIR"
