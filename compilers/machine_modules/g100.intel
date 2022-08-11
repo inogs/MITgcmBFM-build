@@ -4,7 +4,7 @@ module load intel/oneapi-2021--binary
 module load intelmpi/oneapi-2021--binary
 module load mkl/oneapi-2021--binary
 module load gsl/2.5--oneapi--2021.2.0-ifort
-module load cmake/3.18.4--gcc--10.2.0
+module load cmake/3.21.4
 export OPA_HOME=/g100_work/OGS_prod100/OPA/V7C-prod
 export OPA_HOME=/g100_work/OGS20_PRACE_P_2/COPERNICUS/V7C
 export OPA_HOSTNAME=g100
