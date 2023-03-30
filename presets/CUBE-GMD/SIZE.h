@@ -1,5 +1,5 @@
 C $Header: /u/gcmpack/MITgcm/model/inc/SIZE.h,v 1.28 2009/05/17 21:15:07 jmc Exp $
-C $Name: checkpoint66j $
+C $Name:  $
 C
 C  These lines are here to deliberately cause a compile-time error.
 C  If you see these lines in your .F files or the compiler shows them
@@ -51,17 +51,17 @@ C     Nr  :: No. points in Z for full process domain.
       INTEGER Ny
       INTEGER Nr
       PARAMETER (
-     &           sNx = 247,
-     &           sNy =  30,
-     &           OLx =   4,
-     &           OLy =   4,
+     &           sNx =  64,
+     &           sNy =  64,
+     &           OLx =   0,
+     &           OLy =   0,
      &           nSx =   1,
      &           nSy =   1,
-     &           nPx =   2,
-     &           nPy =  10,
+     &           nPx =   1,
+     &           nPy =   1,
      &           Nx  = sNx*nSx*nPx,
      &           Ny  = sNy*nSy*nPy,
-     &           Nr  =  27)
+     &           Nr  =  30)
 
 C     MAX_OLX :: Set to the maximum overlap region size of any array
 C     MAX_OLY    that will be exchanged. Controls the sizing of exch
