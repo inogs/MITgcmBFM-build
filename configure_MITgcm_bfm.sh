@@ -1,9 +1,30 @@
 #! /bin/bash
 
-#
-#  generates two output directories:
-#  MYCODE
-#  READY_FOR_MODEL_NAMELISTS
+usage() {
+echo "   Generates two output directories:"
+echo "   MYCODE/"
+echo "   READY_FOR_MODEL_NAMELISTS/"
+echo ""
+echo "   SYNOPSYS"
+echo "   configure_MITgcm_bfm.sh [ --preset PRESET] "
+
+echo "   PRESET can be NORTH_ADRIATIC or CUBE-GMD"
+echo ""
+}
+
+
+if [ $# -lt 2 ] ; then
+  usage
+  exit 1
+fi
+
+for I in 1 ; do
+   case $1 in
+      "--preset" ) PRESET=$2;;
+        *  ) echo "Unrecognized option $1." ; usage;  exit 1;;
+   esac
+   shift 2
+done
 
 
   
@@ -11,7 +32,6 @@
  COUPLERDIR=$PWD/bfm/src/mitgcm
 MITGCM_ROOT=$PWD/MITgcm
      MYCODE=$PWD/MYCODE
-     PRESET=NORTH_ADRIATIC
   NAMELISTS=$PWD/READY_FOR_MODEL_NAMELISTS
 
 
