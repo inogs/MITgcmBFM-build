@@ -1,7 +1,7 @@
 #! /bin/bash
 
 
-  BFM_BRANCH=dev_ogs
+  BFM_BRANCH=dev_mitgcm
 
  MITGCM_TAG=checkpoint66j
 
@@ -13,11 +13,6 @@ OGSTM_HOME=$PWD
 git clone git@github.com:CMCC-Foundation/BiogeochemicalFluxModel.git bfm
 cd bfm
 git checkout -b $BFM_BRANCH origin/$BFM_BRANCH
-
-cd $OGSTM_HOME
-git clone git@github.com:gcossarini/BFMCOUPLER.git
-cd BFMCOUPLER
-git checkout bfmv5
 
 cd $OGSTM_HOME
 git clone https://github.com/MITgcm/MITgcm.git
