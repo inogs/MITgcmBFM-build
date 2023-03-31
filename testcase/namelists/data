@@ -79,7 +79,7 @@
 
 # Input datasets
  &PARM05
- bathyFile='../input/closed_box.bat',
+ bathyFile='../input/binaries/closed_box64x64.bat',
  hydrogThetaFile=,
  hydrogSaltFile=,
  zonalWindFile=,
