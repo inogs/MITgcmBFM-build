@@ -44,15 +44,15 @@
  runoffstartdate2  = 000000,
  runoffperiod      = 864000.0,
 #
- atempfile     = '../input/input_binaries/atemp_64x64_10dx37.dat',
- aqhfile       = '../input/input_binaries/aqh_64x64_10dx37.dat',
- uwindfile     = '../input/input_binaries/uwind_64x64_10dx37.dat',
- vwindfile     = '../input/input_binaries/vwind_64x64_10dx37.dat',
- precipfile    = '../input/input_binaries/precip_bal_64x64_10dx37.dat',
- lwdownfile    = '../input/input_binaries/lwdown_64x64_10dx37.dat',
- swdownfile    = '../input/input_binaries/swdown_64x64_10dx37.dat',
- apressurefile = '../input/input_binaries/apressure_64x64_10dx37.dat',
- runofffile    = '../input/input_binaries/runoff_64x64_10dx37.dat',
+ atempfile     = '../input/binaries/atemp_64x64_10dx37.dat',
+ aqhfile       = '../input/binaries/aqh_64x64_10dx37.dat',
+ uwindfile     = '../input/binaries/uwind_64x64_10dx37.dat',
+ vwindfile     = '../input/binaries/vwind_64x64_10dx37.dat',
+ precipfile    = '../input/binaries/precip_bal_64x64_10dx37.dat',
+ lwdownfile    = '../input/binaries/lwdown_64x64_10dx37.dat',
+ swdownfile    = '../input/binaries/swdown_64x64_10dx37.dat',
+ apressurefile = '../input/binaries/apressure_64x64_10dx37.dat',
+ runofffile    = '../input/binaries/runoff_64x64_10dx37.dat',
  &END
 
  &EXF_NML_03
