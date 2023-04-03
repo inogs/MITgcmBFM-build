@@ -77,7 +77,7 @@ C   so that d/dt(eta) is exactly equal to - Div.Transport
 
 C o Allow the use of Non-Linear Free-Surface formulation
 C   this implies that surface thickness (hFactors) vary with time
-#undef NONLIN_FRSURF
+#define NONLIN_FRSURF
 
 C o Include/exclude code for single reduction Conjugate-Gradient solver
 #undef ALLOW_SRCG

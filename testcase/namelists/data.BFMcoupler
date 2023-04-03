@@ -39,11 +39,6 @@
  p_espP2=8.0E-3,
  p_espP3=8.0E-3,
  p_espP4=8.0E-3,
- p_burial=0.00,
- p_fluxC_bot=0.0,
- p_fluxP_bot=0.0,
- p_fluxN_bot=0.0,
- p_fluxSi_bot=0.0,
  
 
  &END

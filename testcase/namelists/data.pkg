@@ -1,6 +1,7 @@
 # Packages
 #
  &PACKAGES
+ useCAL=.TRUE.,
  useKPP=.TRUE.,
  useOBCS=.FALSE.,
  useEXF=.TRUE.,
