@@ -54,13 +54,13 @@
 # Time stepping parameters
  &PARM03
  startTime=0,
- endTime=31104001,
+ endTime=864000,
  deltaT=300., 
 
- pChkptFreq=31104000,
- chkptFreq =31104000,
+ pChkptFreq=86400,
+ chkptFreq =86400,
  dumpFreq=0.0,
- monitorFreq=86400,
+ monitorFreq=3600,
  periodicExternalForcing=.FALSE.,
  &
 
