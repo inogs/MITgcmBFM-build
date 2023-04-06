@@ -21,8 +21,9 @@ cd $RUNDIR
 for I in $HERE/namelists/* ; do
 	ln -s $I
 done
-cd $HERE
-#cp namelists/* $RUNDIR
 
-cp ../MITGCM_BUILD/mitgcmuv $RUNDIR
+ln -fs $HERE/../READY_FOR_MODEL_NAMELISTS/data.ptracers
+ln -fs $HERE/../READY_FOR_MODEL_NAMELISTS/data.diagnostics
+
+ln -fs $HERE/../MITGCM_BUILD/mitgcmuv
 
