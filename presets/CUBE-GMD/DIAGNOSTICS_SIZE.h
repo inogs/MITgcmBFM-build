@@ -22,8 +22,8 @@ C  and "diagSt_size" (statistics-diags) since values here are deliberately small
       INTEGER    nRegions, sizRegMsk, nStats
       INTEGER    diagSt_size
       PARAMETER( ndiagMax = 1500 ) ! CGP increase from 500 to 1000
-      PARAMETER( numlists = 100, numperlist = 100, numLevels=2*Nr )
-      PARAMETER( numDiags = 100*Nr )
+      PARAMETER( numlists = 200, numperlist = 200, numLevels=2*Nr )
+      PARAMETER( numDiags = 200*Nr )
       PARAMETER( nRegions = 0 , sizRegMsk = 1 , nStats = 4 )
       PARAMETER( diagSt_size = 100*Nr )
 
