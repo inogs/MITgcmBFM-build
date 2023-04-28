@@ -57,7 +57,7 @@ echo "Now edit and configure your setup in $MYCODE/"
 cp $COUPLERDIR/BFMcoupler*.F $MYCODE
 cp $COUPLERDIR/BFMcoupler*.h $MYCODE
 
-cd $COUPLERDIR
+cd $COUPLERDIR/code_generators
 python passivetrc_reducer_8chars.py -i $BFMDIR/build/tmp/OGS_PELAGIC/namelist.passivetrc -o $NAMELISTS/namelist.passivetrc
 
 python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $MYCODE
