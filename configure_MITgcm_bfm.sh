@@ -44,3 +44,4 @@ python2 bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $
 python2 bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type namelist -o $NAMELISTS
 
 python2 diff_apply.py -i $MITGCM_ROOT  -o $MYCODE
+echo "Now copy your specific SIZE.h_{number_of_points} from your preset in MYCODE/SIZE.h"
