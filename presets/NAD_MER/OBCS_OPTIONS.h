@@ -1,6 +1,3 @@
-C $Header: /u/gcmpack/MITgcm/pkg/obcs/OBCS_OPTIONS.h,v 1.19 2017/06/11 01:36:56 dimitri Exp $
-C $Name: checkpoint66j $
-
 C CPP options file for OBCS package
 C Use this file for selecting options within the OBCS package
 
@@ -37,9 +34,7 @@ C Include hooks to sponge layer treatment of pkg/seaice variables
 C balance barotropic velocity
 #define ALLOW_OBCS_BALANCE
 
-C add tidal contributions to normal OB flow
-C NOTE that at the moment tidal forcing is applied
-C only to "normal" flow.
+C Allow to add barotropic tidal contributions to OB velocity
 #define ALLOW_OBCS_TIDES
 
 C Use older implementation of obcs in seaice-dynamics
