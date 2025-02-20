@@ -22,7 +22,7 @@ c  #define GCHEM_SEPARATE_FORCING
 
 C o Allow single update of some gchem tracers, adding Geo-Chemistry
 C    tendency to Advect-Diff tendency
-#undef GCHEM_ADD2TR_TENDENCY
+#define GCHEM_ADD2TR_TENDENCY
 #ifdef ALLOW_CFC
 # define GCHEM_ADD2TR_TENDENCY
 #endif
