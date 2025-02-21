@@ -5,13 +5,13 @@
 #  MYCODE
 #  READY_FOR_MODEL_NAMELISTS
 
-
+set -e
   
  COUPLERDIR=$PWD/BFMCOUPLER
      BFMDIR=$PWD/bfm
 MITGCM_ROOT=$PWD/MITgcm
      MYCODE=$PWD/MYCODE
-     PRESET=NORTH_ADRIATIC
+     PRESET=NAD_MER
   NAMELISTS=$PWD/READY_FOR_MODEL_NAMELISTS
 
 
@@ -29,8 +29,8 @@ mkdir -p $MYCODE $NAMELISTS
 [[ -f $MYCODE/DIAGNOSTICS_SIZE.h ]] ||  cp MITgcm/pkg/diagnostics/DIAGNOSTICS_SIZE.h $MYCODE
 
 ########  copying from preset #############
-cp $PWD/presets/${PRESET}/*.h $MYCODE
-cp $PWD/presets/${PRESET}/*.F $MYCODE
+cp -v $PWD/presets/${PRESET}/*.h $MYCODE
+cp -v $PWD/presets/${PRESET}/*.F $MYCODE
 
 echo "Now edit and configure your setup in $MYCODE/"
 
