@@ -43,5 +43,5 @@ python passivetrc_reducer_8chars.py -i $BFMDIR/build/tmp/OGS_PELAGIC/namelist.pa
 python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $MYCODE
 python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type namelist -o $NAMELISTS
 
-python diff_apply.py -i $MITGCM_ROOT  -o $MYCODE
+python diff_apply.py -i $MITGCM_ROOT  -o $MYCODE -n 12
 echo "Now copy your specific SIZE.h_{number_of_points} from your preset in MYCODE/SIZE.h"
