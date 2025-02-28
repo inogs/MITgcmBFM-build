@@ -1,6 +1,6 @@
-export NETCDFF_INC=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/netcdf-fortran-4.6.1-bj372hbzgg3fa4lzrb4ycictepxlkpk6/inc
+export NETCDFF_INC=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/netcdf-fortran-4.6.1-bj372hbzgg3fa4lzrb4ycictepxlkpk6/include
 export NETCDFF_LIB=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/netcdf-fortran-4.6.1-bj372hbzgg3fa4lzrb4ycictepxlkpk6/lib
-export NETCDF_INC=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/netcdf-c-4.9.2-z3ssjadzqeyido5w5r2xoycdszagel2o/inc
+export NETCDF_INC=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/netcdf-c-4.9.2-z3ssjadzqeyido5w5r2xoycdszagel2o/include
 export NETCDF_LIB=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/netcdf-c-4.9.2-z3ssjadzqeyido5w5r2xoycdszagel2o/lib
 
 export MPI_HOME=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/openmpi-5.0.6-mlnc6lmg4ck2fbriptk2vgbjv2klao75/
