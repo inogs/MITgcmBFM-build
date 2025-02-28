@@ -4,5 +4,5 @@ export NETCDF_INC=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx51
 export NETCDF_LIB=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/netcdf-c-4.9.2-z3ssjadzqeyido5w5r2xoycdszagel2o/lib
 
 export MPI_HOME=/home/mmanizza/spack/opt/spack/linux-ubuntu24.04-skylake_avx512/gcc-13.3.0/openmpi-5.0.6-mlnc6lmg4ck2fbriptk2vgbjv2klao75/
-# GSL_INC=
-# GSL_LIB=
+export GSL_INC=$GSL_ROOT_DIR/include
+export GSL_LIB=$GSL_ROOT_DIR/lib
