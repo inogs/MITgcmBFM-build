@@ -1,9 +1,31 @@
 #! /bin/bash
 
-#
-#  generates two output directories:
-#  MYCODE
-#  READY_FOR_MODEL_NAMELISTS
+usage() {
+echo "Generates two output directories:"
+echo "- MYCODE"
+echo "- READY_FOR_MODEL_NAMELISTS"
+echo ""
+echo "SYNOPSYS"
+echo "configure_MITgcm_bfm.sh [ -p PRESET] "
+echo "PRESET can be NORTH_ADRIATIC or NAD_MER"
+echo ""
+echo "EXAMPLE"
+echo "./configure_MITgcm_bfm.sh -p NAD_MER"
+}
+
+
+if [ $# -lt 2 ] ; then
+  usage
+  exit 1
+fi
+
+for I in 1 ; do
+   case $1 in
+      "-p" ) PRESET=$2;;
+        *  ) echo "Unrecognized option $1." ; usage;  exit 1;;
+   esac
+   shift 2
+done
 
 set -e
   
@@ -11,7 +33,6 @@ set -e
      BFMDIR=$PWD/bfm
 MITGCM_ROOT=$PWD/MITgcm
      MYCODE=$PWD/MYCODE
-     PRESET=NAD_MER
   NAMELISTS=$PWD/READY_FOR_MODEL_NAMELISTS
 
 
@@ -44,4 +65,5 @@ python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $M
 python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type namelist -o $NAMELISTS
 
 python diff_apply.py -i $MITGCM_ROOT  -o $MYCODE -n 12
-echo "Now copy your specific SIZE.h_{number_of_points} from your preset in MYCODE/SIZE.h"
+echo "Now copy your specific SIZE.h_{number_of_points} from presets/${PRESET} in MYCODE/SIZE.h"
+
