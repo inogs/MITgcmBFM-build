@@ -154,7 +154,7 @@ fi
 
 export INCLUDEDIRS="$INCLUDEDIRS $BFM_INC $GSL_INC"
 export INCLUDES="$INCLUDES -I$BFM_INC -I$GSL_INC"
-export LIBS="$LIBS -L$BFM_LIB -lbfm -L$GSL_LIB -L$NETCDFF_LIB -lnetcdff -L$NETCDF_LIB -lnetcdf"
+export LIBS="$LIBS -L$BFM_LIB -lbfm -L$GSL_LIB -lgsl -lgslcblas -L$NETCDFF_LIB -lnetcdff -L$NETCDF_LIB -lnetcdf"
 
 
 
