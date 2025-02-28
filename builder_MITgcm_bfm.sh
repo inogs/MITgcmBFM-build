@@ -34,7 +34,19 @@ for I in 1 ; do
 done
 
 
+# Now you have to assign to the INC_FILE variable the name of your
+# opt file where you have your settings for your machine.
 
+# You can either use just the simple name of the file direclty
+# assigned to INC_FILE or you can build here the name
+# using the following variables.
+#  Here a generic example for an intel compiler:
+# MIT_ARCH=x86_64
+# MIT_OS=LINUX
+# MIT_COMPILER=intel
+# INC_FILE=${MIT_ARCH}.${MIT_OS}.${MIT_COMPILER}
+# In this case you will obtain the following variable
+# INC_FILE=x86_64.LINUX.intel
 
 MIT_ARCH=x86_64
 MIT_OS=LINUX
