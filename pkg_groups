@@ -22,4 +22,4 @@ atmospheric : gfd shap_filt
 
 adjoint : autodiff cost ctrl grdchk
 
-MER : gfd gmredi kpp timeave obcs exf cal diagnostics ptracers flt gchem BFMcoupler longstep rbcs mnc
+MER : gfd gmredi kpp ggl90 timeave obcs exf cal diagnostics ptracers gchem BFMcoupler longstep rbcs mnc
