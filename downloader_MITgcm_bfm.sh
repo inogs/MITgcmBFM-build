@@ -17,7 +17,7 @@ git checkout -b $BFM_BRANCH origin/$BFM_BRANCH
 cd $OGSTM_HOME
 git clone git@github.com:inogs/MITgcmBFM_coupler.git BFMCOUPLER
 cd BFMCOUPLER
-git checkout moving_to_checkpoint_68z
+git checkout 2-adding-tracers
 
 cd $OGSTM_HOME
 git clone https://github.com/MITgcm/MITgcm.git
