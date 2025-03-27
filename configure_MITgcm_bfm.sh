@@ -50,10 +50,9 @@ mkdir -p $MYCODE $NAMELISTS
 [[ -f $MYCODE/DIAGNOSTICS_SIZE.h ]] ||  cp MITgcm/pkg/diagnostics/DIAGNOSTICS_SIZE.h $MYCODE
 
 ########  copying from preset #############
-cp -v $PWD/presets/${PRESET}/*.h $MYCODE
-cp -v $PWD/presets/${PRESET}/*.F $MYCODE
+[ -f $PWD/presets/${PRESET}/*.h ] && cp -v $PWD/presets/${PRESET}/*.h $MYCODE
+[ -f $PWD/presets/${PRESET}/*.F ] && cp -v $PWD/presets/${PRESET}/*.F $MYCODE
 
-echo "Now edit and configure your setup in $MYCODE/"
 
 cp $COUPLERDIR/BFMcoupler*.F $MYCODE
 cp $COUPLERDIR/BFMcoupler*.h $MYCODE
@@ -65,5 +64,6 @@ python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $M
 python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type namelist -o $NAMELISTS
 
 python diff_apply.py -i $MITGCM_ROOT  -o $MYCODE -n 12
-echo "Now copy your specific SIZE.h_{number_of_points} from presets/${PRESET} in MYCODE/SIZE.h"
+echo "Now you can manually edit and configure your setup in $MYCODE/"
+echo "IMPORTANT: copy your specific SIZE.h_{number_of_points} from presets/${PRESET} in MYCODE/SIZE.h"
 
