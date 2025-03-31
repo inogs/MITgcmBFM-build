@@ -36,6 +36,7 @@ FFLAGS="$FFLAGS -m64 -fPIC -assume byterecl -mcmodel=large -shared-intel -extend
 
 if test "x$IEEE" = x ; then     #- with optimisation:
   FOPTIM="-O2 -align -ip -qopt-streaming-stores auto $PROCF" 
+  FOPTIM="-O0 -noalign -g -traceback $PROCF -warn all -warn nounused -fpe0 -ftz -fp-stack-check -check all -ftrapuv -extend-source"
 else
   if test "x$DEVEL" = x ; then  #- no optimisation + IEEE :
     FOPTIM="-O0 -fp-model source -noalign $PROCF"
@@ -52,6 +53,7 @@ F90FLAGS=$FFLAGS
 F90OPTIM=$FOPTIM
 CFLAGS="-O0 -ip -m64 -fPIC $PROCF"
 
+
 NETCDF_ROOT=$NETCDFF_HOME
 NETCDF_HOME=$NETCDFF_HOME
 NETCDF_INCDIR=$NETCDFF_INC
@@ -60,7 +62,7 @@ MPI_INC_DIR=$INTELMPI_HOME/include
 
 if [ -n "$MPI_INC_DIR" -a "x$MPI" = xtrue ] ; then
     INCLUDES="$INCLUDES -I$MPI_INC_DIR -I$NETCDFF_INC "
-    INCLUDEDIRS="$INCLUDEDIRS $MPI_INC_DIR $NETCDFF_INC"
+    INCLUDEDIRS="$INCLUDEDIRS $MPI_INC_DIR $NETCDFF_INC "
     MPIINCLUDEDIR="$MPI_INC_DIR"
     MPI_HEADER_FILES='mpif.h mpiof.h netcdf.inc pnetcdf.inc'
 fi
