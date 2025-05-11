@@ -27,8 +27,24 @@ for I in 1 ; do
    shift 2
 done
 
+
+find_python_command() {
+    if command -v python >/dev/null 2>&1; then
+        echo python
+    elif command -v python3 >/dev/null 2>&1; then
+        echo python3
+    else
+        echo "Error: No suitable Python interpreter found (neither 'python' nor 'python3')." >&2
+        exit 1
+    fi
+}
+
+
+PYTHON_CMD=$(find_python_command)
+
+
 set -e
-  
+
  COUPLERDIR=$PWD/BFMCOUPLER
      BFMDIR=$PWD/bfm
 MITGCM_ROOT=$PWD/MITgcm
@@ -58,12 +74,12 @@ cp $COUPLERDIR/BFMcoupler*.F $MYCODE
 cp $COUPLERDIR/BFMcoupler*.h $MYCODE
 
 cd $COUPLERDIR
-python passivetrc_reducer_8chars.py -i $BFMDIR/build/tmp/OGS_PELAGIC/namelist.passivetrc -o $NAMELISTS/namelist.passivetrc
+${PYTHON_CMD} passivetrc_reducer_8chars.py -i $BFMDIR/build/tmp/OGS_PELAGIC/namelist.passivetrc -o $NAMELISTS/namelist.passivetrc
 
-python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $MYCODE
-python bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type namelist -o $NAMELISTS
+${PYTHON_CMD} bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $MYCODE
+${PYTHON_CMD} bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type namelist -o $NAMELISTS
 
-python diff_apply.py -i $MITGCM_ROOT  -o $MYCODE -n 12
+${PYTHON_CMD} diff_apply.py -i $MITGCM_ROOT  -o $MYCODE -n 12
 echo "Now you can manually edit and configure your setup in $MYCODE/"
 echo "IMPORTANT: copy your specific SIZE.h_{number_of_points} from presets/${PRESET} in MYCODE/SIZE.h"
 
