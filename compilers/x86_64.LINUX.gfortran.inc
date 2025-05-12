@@ -62,7 +62,7 @@ if [ $fcVers -ge 10 ] ; then
   FFLAGS="$FFLAGS -fallow-argument-mismatch"
 fi
 #- Requires gfortran from 2006 onwards for -fconvert=big-endian
-FFLAGS="$FFLAGS -fconvert=big-endian -fimplicit-none -ffixed-line-length-132"
+FFLAGS="$FFLAGS -fimplicit-none -ffixed-line-length-132"
 #- for big setups, compile & link with "-fPIC" or set memory-model to "medium":
 #CFLAGS="$CFLAGS -fPIC"
 #FFLAGS="$FFLAGS -fPIC"
@@ -152,8 +152,8 @@ fi
 
 
 
-export INCLUDEDIRS="$INCLUDEDIRS $BFM_INC $GSL_INC"
-export INCLUDES="$INCLUDES -I$BFM_INC -I$GSL_INC"
+export INCLUDEDIRS="$INCLUDEDIRS $BFM_INC $GSL_INC $NETCDFF_INC"
+export INCLUDES="$INCLUDES -I$BFM_INC -I$GSL_INC -I$NETCDFF_INC"
 export LIBS="$LIBS -L$BFM_LIB -lbfm -L$GSL_LIB -lgsl -lgslcblas -L$NETCDFF_LIB -lnetcdff -L$NETCDF_LIB -lnetcdf"
 
 
