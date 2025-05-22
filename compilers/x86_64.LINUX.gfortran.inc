@@ -40,6 +40,12 @@ else
   F90C=gfortran
 fi
 
+# --------------------------
+FC="$FC -Wl,--copy-dt-needed-entries"
+# to avoid problem of
+# error adding symbols: DSO missing from command line
+# it should be used only in linking, but LD is not used
+# -----------------------
 DEFINES='-DWORDLENGTH=4 -DNML_TERMINATOR'
 EXTENDED_SRC_FLAG='-ffixed-line-length-132'
 
@@ -151,9 +157,9 @@ elif test -d /usr/include/netcdf.inc ; then
 fi
 
 
-
-export INCLUDEDIRS="$INCLUDEDIRS $BFM_INC $GSL_INC $NETCDFF_INC"
-export INCLUDES="$INCLUDES -I$BFM_INC -I$GSL_INC -I$NETCDFF_INC"
+export MPI_INC_DIR="$OPENMPI_HOME/include"
+export INCLUDEDIRS="$INCLUDEDIRS $BFM_INC $GSL_INC"
+export INCLUDES="$INCLUDES -I$BFM_INC -I$GSL_INC"
 export LIBS="$LIBS -L$BFM_LIB -lbfm -L$GSL_LIB -lgsl -lgslcblas -L$NETCDFF_LIB -lnetcdff -L$NETCDF_LIB -lnetcdf"
 
 
