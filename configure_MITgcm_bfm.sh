@@ -73,6 +73,10 @@ mkdir -p $MYCODE $NAMELISTS
 cp $COUPLERDIR/BFMcoupler*.F $MYCODE
 cp $COUPLERDIR/BFMcoupler*.h $MYCODE
 
+
+cp MITgcmBFM_custom/*.F $MYCODE
+
+
 cd $COUPLERDIR
 ${PYTHON_CMD} passivetrc_reducer_8chars.py -i $BFMDIR/build/tmp/OGS_PELAGIC/namelist.passivetrc -o $NAMELISTS/namelist.passivetrc
 
