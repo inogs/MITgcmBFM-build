@@ -75,6 +75,7 @@ cp $COUPLERDIR/BFMcoupler*.h $MYCODE
 
 
 cp MITgcmBFM_custom/*.F $MYCODE
+cp MITgcmBFM_custom/*.h $MYCODE
 
 
 cd $COUPLERDIR
