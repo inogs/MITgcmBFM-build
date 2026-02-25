@@ -74,6 +74,7 @@ cp $COUPLERDIR/BFMcoupler*.F $MYCODE
 cp $COUPLERDIR/BFMcoupler*.h $MYCODE
 
 cd $COUPLERDIR
+${PYTHON_CMD} add_tracers.py -n 5 -o $MYCODE
 ${PYTHON_CMD} passivetrc_reducer_8chars.py -i $BFMDIR/build/tmp/OGS_PELAGIC/namelist.passivetrc -o $NAMELISTS/namelist.passivetrc
 
 ${PYTHON_CMD} bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $MYCODE

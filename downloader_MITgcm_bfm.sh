@@ -17,7 +17,7 @@ git checkout -b $BFM_BRANCH origin/$BFM_BRANCH
 cd $OGSTM_HOME
 git clone git@github.com:inogs/MITgcmBFM_coupler.git BFMCOUPLER
 cd BFMCOUPLER
-git checkout 2-adding-tracers
+git checkout 7-add-arbitrary-number-of-tracers
 
 cd $OGSTM_HOME
 git clone https://github.com/MITgcm/MITgcm.git
