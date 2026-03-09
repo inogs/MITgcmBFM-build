@@ -77,8 +77,7 @@ cd $COUPLERDIR
 ${PYTHON_CMD} add_tracers.py -n 5 -o $MYCODE
 ${PYTHON_CMD} passivetrc_reducer_8chars.py -i $BFMDIR/build/tmp/OGS_PELAGIC/namelist.passivetrc -o $NAMELISTS/namelist.passivetrc
 
-${PYTHON_CMD} bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type code     -o $MYCODE
-${PYTHON_CMD} bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc --type namelist -o $NAMELISTS
+${PYTHON_CMD} bfm_config_gen.py -i $NAMELISTS/namelist.passivetrc  -o $MYCODE
 
 ${PYTHON_CMD} diff_apply.py -i $MITGCM_ROOT  -o $MYCODE -n 12
 echo "Now you can manually edit and configure your setup in $MYCODE/"
