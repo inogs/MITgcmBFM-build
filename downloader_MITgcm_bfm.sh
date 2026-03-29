@@ -23,3 +23,7 @@ cd $OGSTM_HOME
 git clone https://github.com/MITgcm/MITgcm.git
 cd MITgcm
 git checkout -b $MITGCM_TAG $MITGCM_TAG
+
+cd $OGSTM_HOME
+git clone git@github.com:inogs/MITgcmBFM_custom.git
+
