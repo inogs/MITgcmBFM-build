@@ -12,7 +12,7 @@
 
 #  package "groups" definition (including default "default_pkg_list"):
 
-default_pkg_list : MER
+default_pkg_list : MER_EXCH2
 
 gfd : mom_common mom_fluxform mom_vecinv generic_advdiff debug mdsio rw monitor
 
@@ -23,3 +23,5 @@ atmospheric : gfd shap_filt
 adjoint : autodiff cost ctrl grdchk
 
 MER : gfd gmredi kpp ggl90 timeave obcs exf cal diagnostics ptracers gchem BFMcoupler longstep rbcs mnc
+
+MER_EXCH2 : gfd gmredi kpp ggl90 timeave obcs exf cal diagnostics ptracers gchem BFMcoupler longstep rbcs mnc exch2
